@@ -34,14 +34,6 @@
 
                             @endforeach
 
-                            <div class="form-group">
-                                <label for="">Garage</label>
-                                <select multiple class="form-control" name="plaats_id">
-                                    @foreach($dropgarages as $dropgarage)
-                                        <option value="{{ $dropgarage->areas_id}}">{{ $dropgarage->garage_naam}} {{ $dropgarage->plaats}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
                         </tbody>
                         <script>
                             $(function() {

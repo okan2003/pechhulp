@@ -31,8 +31,7 @@ Route::get('/user-dash', [App\Http\Controllers\UserController::class, 'index'])-
 Route::get('/admin-dash', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dash')->middleware('admin');
 Route::get('/garage-dash', [App\Http\Controllers\GarageController::class, 'index'])->name('garage.dash')->middleware('garage');
 Route::get('/reviews', [App\Http\Controllers\ReviewsController::class, 'index'])->name('reviews');
-Route::get('/garages', [App\Http\Controllers\GaragesController::class, 'showGarages'])->name('garages');
-Route::get('/garages', [App\Http\Controllers\GaragesController::class, 'dropGarages'])->name('dropgarages');
+Route::get('/garages', [App\Http\Controllers\GaragesController::class, 'showGarages'])->name('showGarages');
 Route::get('/review-check', [App\Http\Controllers\ReviewsController::class, 'showReviews'])->name('review-check')->middleware('admin');
 Route::get('/review-check', [App\Http\Controllers\ReviewsController::class, 'totalReviews'])->name('review-check')->middleware('admin');
 Route::get('changeReviewStatus', [App\Http\Controllers\ReviewsController::class, 'changeReviewStatus'])->name('changeReviewStatus')->middleware('admin');

@@ -21,14 +21,6 @@ class GaragesController extends Controller
         ]);
     }
 
-    public function dropGarages(){
-        $dropgarages = Garage::join('areas', 'areas.id', '=', 'garages.area_id')
-            ->get(['garages.garage_naam', 'areas.plaats']);
-
-        return view('garages', ['dropgarages' => $dropgarages]);
-
-    }
-
     public function create()
     {
         return view ('garage.create');
